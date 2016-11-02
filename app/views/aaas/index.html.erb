@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aaas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aaas.each do |aaa| %>
+      <tr>
+        <td><%= aaa.test_id %></td>
+        <!-- <td><%= link_to "asd", "/get_log", method: :post %></td> -->
+        <td><%= link_to 'Show', aaa %></td>
+        <td><%= link_to 'Edit', edit_aaa_path(aaa) %></td>
+        <td><%= link_to 'Destroy', aaa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aaa', new_aaa_path %>
